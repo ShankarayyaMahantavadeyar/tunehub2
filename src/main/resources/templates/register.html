@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-image: url('bk2.jpg'); /* Replace 'your_actual_image_url_or_path.jpg' with the actual URL or path to your image */
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            height: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/register" method="post">
+        <label>UserName:</label>
+        <input type="text" placeholder="Enter the UserName" name="username">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter the Email" name="email">
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter the Password" name="password">
+        <hr>
+        <label>Gender:</label>
+        <label>Male:</label>
+        <input type="radio" name="gender" value="male">
+        <hr>
+        <label>Female:</label>
+        <input type="radio" name="gender" value="female">
+        <hr>
+        <label>Others:</label>
+        <input type="radio" name="gender" value="Others">
+        <hr>
+
+        <label>Role:</label>
+        <label>Admin</label>
+        <input type="radio" name="role" value="admin"><hr>
+        <label>Customer</label>
+        <input type="radio" name="role" value="customer"><hr>
+
+        <label>Address:</label>
+        <textarea name="address"></textarea>
+
+        <hr>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
